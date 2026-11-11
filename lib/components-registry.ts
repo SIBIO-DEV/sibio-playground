@@ -2,7 +2,13 @@ import type { ComponentContent, ComponentDoc } from "@/lib/types";
 import { meta as buttonMeta } from "@/content/components/button/meta";
 import { examples as buttonExamples } from "@/content/components/button/examples";
 import { props as buttonProps } from "@/content/components/button/props";
-
+import { examples as pageHeaderExamples } from '@/content/components/page-header/examples';
+import { meta as PageHeaderMeta} from '@/content/components/page-header/meta';
+import { props as pageHeaderProps } from '@/content/components/page-header/props';
+//bread
+import { examples as CardExamples } from '@/content/components/card/example';
+import { meta as CardMeta} from '@/content/components/card/meta';
+import { props as CardProps } from '@/content/components/card/props';
 /**
  * Registro central de componentes documentados.
  *
@@ -36,7 +42,24 @@ export const componentsRegistry: ComponentDoc[] = [
     examples: buttonExamples,
     props: buttonProps,
   }),
+  defineComponentDoc({
+    meta: PageHeaderMeta,
+    examples: pageHeaderExamples,
+    props: pageHeaderProps,
+  }),
+  defineComponentDoc({
+    meta: CardMeta,
+    examples: CardExamples,
+    props: CardProps
+  })
 ];
+
+console.log("REGISTRY DEBUG:", componentsRegistry.map((d) => ({
+  slug: d.slug,
+  examplesIsArray: Array.isArray(d.content?.examples),
+  examplesValue: d.content?.examples,
+  contentKeys: d.content ? Object.keys(d.content) : null,
+})));
 
 /** Busca un componente por su slug (`undefined` si no existe). */
 export function getComponentDoc(slug: string): ComponentDoc | undefined {

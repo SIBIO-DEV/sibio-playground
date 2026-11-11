@@ -166,6 +166,9 @@ importers:
 
   .:
     dependencies:
+      '@sibio-dev/ui':
+        specifier: ^1.0.0
+        version: 1.0.0(lucide-react@1.70.0(@types/react@19.3.0)(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       lucide-react:
         specifier: ^1.70.0
         version: 1.70.0(@types/react@19.3.0)(react@19.3.0)
@@ -601,6 +604,14 @@ packages:
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
+
+  '@sibio-dev/ui@1.0.0':
+    resolution: {integrity: sha512-WKS9G1vq0D+zxPSGN7mDmvxmAosTW3k5ppKKPuTOvBP9U+WCKM3kNS9cwk2LRZsYm62CyIExXnQopdJkbgFb4g==, tarball: https://npm.pkg.github.com/download/@sibio-dev/ui/1.0.0/3bbaf2947be57fc2f77a35678d16708dcf12aae5}
+    engines: {node: '>=18'}
+    peerDependencies:
+      lucide-react: ^0.468.0
+      react: ^18.0.0
+      react-dom: ^18.0.0
 
   '@swc/helpers@0.5.23':
     resolution: {integrity: sha512-5lSsMOTXURePglDfvuAQUqkGek9Hg2kksOYay2m0+XR++b2NWYL/4sWyuvVBIs8oKnJaxkdi9whaL/sqN13afw==}
@@ -2509,6 +2520,12 @@ snapshots:
   '@nolyfill/is-core-module@1.0.39': {}
 
   '@rtsao/scc@1.1.0': {}
+
+  '@sibio-dev/ui@1.0.0(lucide-react@1.70.0(@types/react@19.3.0)(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+    dependencies:
+      lucide-react: 1.70.0(@types/react@19.3.0)(react@19.3.0)
+      react: 19.3.0
+      react-dom: 19.3.0(react@19.3.0)
 
   '@swc/helpers@0.5.23':
     dependencies:

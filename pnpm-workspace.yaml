@@ -1,3 +1,5 @@
 allowBuilds:
   sharp: false
   unrs-resolver: false
+minimumReleaseAgeExclude:
+  - '@sibio-dev/ui@1.0.0'
